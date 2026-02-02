@@ -1,0 +1,716 @@
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+<http://ontologia-tcc/vocabulary/publicacao#plataforma>
+        rdf:type  owl:Class .
+
+<http://ontologia-tcc/vocabulary/monitoramento#utilizadoPor>
+        rdf:type  owl:ObjectProperty .
+
+<http://ontologia-tcc/vocabulary/base#id>
+        rdf:type  owl:FunctionalProperty , owl:DatatypeProperty .
+
+<http://ontologia-tcc/description/instancias#CLP>
+        rdf:type    owl:Thing , <http://ontologia-tcc/vocabulary/orgao#orgao> , <http://ontologia-tcc/vocabulary/base#EntidadeNomeavel> , <http://ontologia-tcc/vocabulary/base#EntidadeDescritivel> , <http://ontologia-tcc/vocabulary/base#EntidadeIdentificavel> ;
+        <http://ontologia-tcc/vocabulary/base#descricao>
+                "Agência Governamental" ;
+        <http://ontologia-tcc/vocabulary/base#nome>
+                "Ranking de Competitividade do CLP - Centro de Liderança Pública (CLP)" ;
+        <http://ontologia-tcc/vocabulary/levantamento#produzIndicador>
+                <http://ontologia-tcc/description/instancias#CNPq> , <http://ontologia-tcc/description/instancias#CAPES> ;
+        <http://ontologia-tcc/vocabulary/monitoramento#utiliza>
+                <http://ontologia-tcc/description/instancias#GrafoConhecimento> ;
+        <http://ontologia-tcc/vocabulary/orgao#publica>
+                <http://ontologia-tcc/description/instancias#IND9> ;
+        <http://ontologia-tcc/vocabulary/publicacao#publicaEm>
+                <http://ontologia-tcc/description/instancias#RelatorioCLP> ;
+        <http://ontologia-tcc/vocabulary/sistematizacao#temMetodologia>
+                <http://ontologia-tcc/description/instancias#Oslo> ;
+        <http://ontologia-tcc/vocabulary/validacao#temAuditoria>
+                <http://ontologia-tcc/description/instancias#ValidInterna> ;
+        owl:sameAs  <http://ontologia-tcc/description/instancias#CLP> .
+
+<http://ontologia-tcc/vocabulary/indicador#observacao>
+        rdf:type  owl:FunctionalProperty , owl:DatatypeProperty .
+
+<http://ontologia-tcc/vocabulary/base#nome>
+        rdf:type  owl:FunctionalProperty , owl:DatatypeProperty .
+
+<http://ontologia-tcc/description/instancias#Oslo>
+        rdf:type    owl:Thing , <http://ontologia-tcc/vocabulary/sistematizacao#metodologia> , <http://ontologia-tcc/vocabulary/base#EntidadeNomeavel> , <http://ontologia-tcc/vocabulary/base#EntidadeDescritivel> , <http://ontologia-tcc/vocabulary/base#EntidadeIdentificavel> ;
+        <http://ontologia-tcc/vocabulary/base#descricao>
+                "Principal guia internacional para coleta, interpretação e padronização de dados sobre inovação." ;
+        <http://ontologia-tcc/vocabulary/base#nome>
+                "Manual de Oslo" ;
+        <http://ontologia-tcc/vocabulary/sistematizacao#aplicaMetodologia>
+                <http://ontologia-tcc/description/instancias#IND5> , <http://ontologia-tcc/description/instancias#IND9> , <http://ontologia-tcc/description/instancias#IND7> ;
+        <http://ontologia-tcc/vocabulary/sistematizacao#aplicacao>
+                "Inovação" ;
+        <http://ontologia-tcc/vocabulary/sistematizacao#fundamenta>
+                <http://ontologia-tcc/description/instancias#CGEE> , <http://ontologia-tcc/description/instancias#CLP> ;
+        owl:sameAs  <http://ontologia-tcc/description/instancias#Oslo> .
+
+<http://ontologia-tcc/vocabulary/levantamento#fonte>
+        rdf:type  owl:Class .
+
+<http://ontologia-tcc/vocabulary/base#EntidadeDescritivel>
+        rdf:type  owl:Class .
+
+<http://ontologia-tcc/description/instancias#IND5>
+        rdf:type    owl:Thing , <http://ontologia-tcc/vocabulary/base#EntidadeNomeavel> , <http://ontologia-tcc/vocabulary/indicador#indicador> , <http://ontologia-tcc/vocabulary/base#EntidadeIdentificavel> , <http://ontologia-tcc/vocabulary/base#EntidadeDescritivel> ;
+        <http://ontologia-tcc/vocabulary/base#descricao>
+                "Número de bolsas de pesquisa e produtividade concedidas pelo CNPq." ;
+        <http://ontologia-tcc/vocabulary/base#nome>
+                "Bolsas de pesquisa do CNPq" ;
+        <http://ontologia-tcc/vocabulary/indicador#categoria>
+                "Recursos Humanos" ;
+        <http://ontologia-tcc/vocabulary/indicador#metrica>
+                "nº de bolsas" ;
+        <http://ontologia-tcc/vocabulary/indicador#periodicidade>
+                "Anual" ;
+        <http://ontologia-tcc/vocabulary/indicador#referencia>
+                "https://octi.cgee.org.br/" ;
+        <http://ontologia-tcc/vocabulary/indicador#serie>
+                "2000–presente" ;
+        <http://ontologia-tcc/vocabulary/levantamento#temFonte>
+                <http://ontologia-tcc/description/instancias#CNPq> ;
+        <http://ontologia-tcc/vocabulary/monitoramento#monitoradoPor>
+                <http://ontologia-tcc/description/instancias#GrafoConhecimento> ;
+        <http://ontologia-tcc/vocabulary/orgao#publicadoPor>
+                <http://ontologia-tcc/description/instancias#CGEE> ;
+        <http://ontologia-tcc/vocabulary/publicacao#publicadoPor>
+                <http://ontologia-tcc/description/instancias#PortalOCTI> ;
+        <http://ontologia-tcc/vocabulary/sistematizacao#apoiadoPor>
+                <http://ontologia-tcc/description/instancias#Oslo> ;
+        <http://ontologia-tcc/vocabulary/validacao#auditadoPor>
+                <http://ontologia-tcc/description/instancias#ValidInterna> ;
+        owl:sameAs  <http://ontologia-tcc/description/instancias#IND5> .
+
+<http://ontologia-tcc/vocabulary/validacao#aplicaAuditoria>
+        rdf:type  owl:ObjectProperty .
+
+<http://ontologia-tcc/description/instancias#RelatorioMCTI>
+        rdf:type    owl:Thing , <http://ontologia-tcc/vocabulary/publicacao#plataforma> , <http://ontologia-tcc/vocabulary/base#EntidadeIdentificavel> , <http://ontologia-tcc/vocabulary/base#EntidadeDescritivel> , <http://ontologia-tcc/vocabulary/base#EntidadeNomeavel> ;
+        <http://ontologia-tcc/vocabulary/base#nome>
+                "Indicadores Nacionais de Ciência, Tecnologia e Inovação (2022)" ;
+        <http://ontologia-tcc/vocabulary/publicacao#publica>
+                <http://ontologia-tcc/description/instancias#MCTI> ;
+        <http://ontologia-tcc/vocabulary/publicacao#publicaIndicador>
+                <http://ontologia-tcc/description/instancias#IND2> , <http://ontologia-tcc/description/instancias#IND3> , <http://ontologia-tcc/description/instancias#IND6> , <http://ontologia-tcc/description/instancias#IND1> , <http://ontologia-tcc/description/instancias#IND4> ;
+        <http://ontologia-tcc/vocabulary/publicacao#tipo>
+                "Relatórios e Boletins" ;
+        owl:sameAs  <http://ontologia-tcc/description/instancias#RelatorioMCTI> .
+
+<http://ontologia-tcc/vocabulary/monitoramento#monitoradoPor>
+        rdf:type  owl:ObjectProperty .
+
+<http://ontologia-tcc/vocabulary/publicacao#publicadoPor>
+        rdf:type  owl:ObjectProperty .
+
+<http://ontologia-tcc/vocabulary/levantamento#tipo>
+        rdf:type  owl:FunctionalProperty , owl:DatatypeProperty .
+
+<http://ontologia-tcc/vocabulary/sistematizacao#fundamenta>
+        rdf:type  owl:ObjectProperty .
+
+<http://ontologia-tcc/description/instancias#PortalOCTI>
+        rdf:type    <http://ontologia-tcc/vocabulary/publicacao#plataforma> , <http://ontologia-tcc/vocabulary/base#EntidadeNomeavel> , <http://ontologia-tcc/vocabulary/base#EntidadeIdentificavel> , owl:Thing , <http://ontologia-tcc/vocabulary/base#EntidadeDescritivel> ;
+        <http://ontologia-tcc/vocabulary/base#nome>
+                "Portal oficial do Observatório de Ciência, Tecnologia e Inovação" ;
+        <http://ontologia-tcc/vocabulary/publicacao#publica>
+                <http://ontologia-tcc/description/instancias#CGEE> ;
+        <http://ontologia-tcc/vocabulary/publicacao#publicaIndicador>
+                <http://ontologia-tcc/description/instancias#IND7> , <http://ontologia-tcc/description/instancias#IND5> ;
+        <http://ontologia-tcc/vocabulary/publicacao#tipo>
+                "Portal Oficial" ;
+        owl:sameAs  <http://ontologia-tcc/description/instancias#PortalOCTI> .
+
+<http://ontologia-tcc/description/bundle/individuals>
+        rdf:type         owl:Ontology ;
+        rdfs:comment     "Generated by Owl Reason 2.15.0" ;
+        owl:imports      <http://ontologia-tcc/description/bundle> ;
+        owl:versionInfo  "1770001285" .
+
+<http://ontologia-tcc/description/instancias#CAPES>
+        rdf:type    <http://ontologia-tcc/vocabulary/levantamento#fonte> , owl:Thing , <http://ontologia-tcc/vocabulary/base#EntidadeDescritivel> , <http://ontologia-tcc/vocabulary/base#EntidadeIdentificavel> , <http://ontologia-tcc/vocabulary/base#EntidadeNomeavel> ;
+        <http://ontologia-tcc/vocabulary/base#descricao>
+                "responsável por avaliar, fomentar e consolidar a pós-graduação stricto sensu (mestrado e doutorado) no Brasil, além de formar professores \nda educação básica" ;
+        <http://ontologia-tcc/vocabulary/base#nome>
+                "Coordenação de Aperfeiçoamento de Pessoal de Nível Superior" ;
+        <http://ontologia-tcc/vocabulary/levantamento#fonteDe>
+                <http://ontologia-tcc/description/instancias#IND9> , <http://ontologia-tcc/description/instancias#IND4> , <http://ontologia-tcc/description/instancias#IND3> ;
+        <http://ontologia-tcc/vocabulary/levantamento#fornece>
+                <http://ontologia-tcc/description/instancias#CLP> , <http://ontologia-tcc/description/instancias#MCTI> ;
+        <http://ontologia-tcc/vocabulary/levantamento#tipo>
+                "Fonte primária" ;
+        owl:sameAs  <http://ontologia-tcc/description/instancias#CAPES> .
+
+<http://ontologia-tcc/vocabulary/indicador#metrica>
+        rdf:type  owl:FunctionalProperty , owl:DatatypeProperty .
+
+<http://ontologia-tcc/vocabulary/sistematizacao#metodologia>
+        rdf:type  owl:Class .
+
+<http://ontologia-tcc/vocabulary/base#EntidadeNomeavel>
+        rdf:type  owl:Class .
+
+<http://ontologia-tcc/vocabulary/validacao#tipo>
+        rdf:type  owl:FunctionalProperty , owl:DatatypeProperty .
+
+<http://ontologia-tcc/vocabulary/indicador#indicador>
+        rdf:type  owl:Class .
+
+<http://ontologia-tcc/description/instancias#RelatorioFIEC>
+        rdf:type    <http://ontologia-tcc/vocabulary/publicacao#plataforma> , <http://ontologia-tcc/vocabulary/base#EntidadeIdentificavel> , <http://ontologia-tcc/vocabulary/base#EntidadeDescritivel> , owl:Thing , <http://ontologia-tcc/vocabulary/base#EntidadeNomeavel> ;
+        <http://ontologia-tcc/vocabulary/base#nome>
+                "Relatório Técnico FIEC 2025" ;
+        <http://ontologia-tcc/vocabulary/publicacao#publica>
+                <http://ontologia-tcc/description/instancias#FIEC> ;
+        <http://ontologia-tcc/vocabulary/publicacao#publicaIndicador>
+                <http://ontologia-tcc/description/instancias#IND10> ;
+        <http://ontologia-tcc/vocabulary/publicacao#tipo>
+                "Relatórios e Boletins" ;
+        owl:sameAs  <http://ontologia-tcc/description/instancias#RelatorioFIEC> .
+
+<http://ontologia-tcc/description/instancias#IND4>
+        rdf:type    <http://ontologia-tcc/vocabulary/base#EntidadeDescritivel> , owl:Thing , <http://ontologia-tcc/vocabulary/indicador#indicador> , <http://ontologia-tcc/vocabulary/base#EntidadeNomeavel> , <http://ontologia-tcc/vocabulary/base#EntidadeIdentificavel> ;
+        <http://ontologia-tcc/vocabulary/base#descricao>
+                "Número de doutores titulados por grande área do conhecimento." ;
+        <http://ontologia-tcc/vocabulary/base#nome>
+                "Doutores titulados por grande área" ;
+        <http://ontologia-tcc/vocabulary/indicador#categoria>
+                "Recursos Humanos" ;
+        <http://ontologia-tcc/vocabulary/indicador#metrica>
+                "Pessoas" ;
+        <http://ontologia-tcc/vocabulary/indicador#periodicidade>
+                "Anual" ;
+        <http://ontologia-tcc/vocabulary/indicador#referencia>
+                "Indicadores CT&I 2022 – Tabela 2.3.2" ;
+        <http://ontologia-tcc/vocabulary/indicador#serie>
+                "2000–2021" ;
+        <http://ontologia-tcc/vocabulary/levantamento#temFonte>
+                <http://ontologia-tcc/description/instancias#CAPES> ;
+        <http://ontologia-tcc/vocabulary/monitoramento#monitoradoPor>
+                <http://ontologia-tcc/description/instancias#GrafoConhecimento> ;
+        <http://ontologia-tcc/vocabulary/orgao#publicadoPor>
+                <http://ontologia-tcc/description/instancias#MCTI> ;
+        <http://ontologia-tcc/vocabulary/publicacao#publicadoPor>
+                <http://ontologia-tcc/description/instancias#RelatorioMCTI> ;
+        <http://ontologia-tcc/vocabulary/sistematizacao#apoiadoPor>
+                <http://ontologia-tcc/description/instancias#Frascati> ;
+        <http://ontologia-tcc/vocabulary/validacao#auditadoPor>
+                <http://ontologia-tcc/description/instancias#ValidInterna> ;
+        owl:sameAs  <http://ontologia-tcc/description/instancias#IND4> .
+
+<http://ontologia-tcc/vocabulary/monitoramento#aplicaMonitoramento>
+        rdf:type  owl:ObjectProperty .
+
+owl:Nothing  rdf:type  owl:Class .
+
+<http://ontologia-tcc/vocabulary/validacao#auditadoPor>
+        rdf:type  owl:ObjectProperty .
+
+<http://ontologia-tcc/description/instancias#Frascati>
+        rdf:type    owl:Thing , <http://ontologia-tcc/vocabulary/base#EntidadeDescritivel> , <http://ontologia-tcc/vocabulary/sistematizacao#metodologia> , <http://ontologia-tcc/vocabulary/base#EntidadeIdentificavel> , <http://ontologia-tcc/vocabulary/base#EntidadeNomeavel> ;
+        <http://ontologia-tcc/vocabulary/base#descricao>
+                "Principal guia metodológico internacional para definir, coletar e harmonizar estatísticas sobre Pesquisa e Desenvolvimento (P&D)" ;
+        <http://ontologia-tcc/vocabulary/base#nome>
+                "Manual de Frascati" ;
+        <http://ontologia-tcc/vocabulary/sistematizacao#aplicaMetodologia>
+                <http://ontologia-tcc/description/instancias#IND3> , <http://ontologia-tcc/description/instancias#IND1> , <http://ontologia-tcc/description/instancias#IND6> , <http://ontologia-tcc/description/instancias#IND4> , <http://ontologia-tcc/description/instancias#IND2> , <http://ontologia-tcc/description/instancias#IND10> , <http://ontologia-tcc/description/instancias#IND8> ;
+        <http://ontologia-tcc/vocabulary/sistematizacao#aplicacao>
+                "P&D e insumos" ;
+        <http://ontologia-tcc/vocabulary/sistematizacao#fundamenta>
+                <http://ontologia-tcc/description/instancias#MCTI> , <http://ontologia-tcc/description/instancias#FIEC> , <http://ontologia-tcc/description/instancias#IBID> ;
+        owl:sameAs  <http://ontologia-tcc/description/instancias#Frascati> .
+
+<http://ontologia-tcc/description/instancias#IBGE>
+        rdf:type    <http://ontologia-tcc/vocabulary/base#EntidadeIdentificavel> , <http://ontologia-tcc/vocabulary/base#EntidadeNomeavel> , <http://ontologia-tcc/vocabulary/base#EntidadeDescritivel> , <http://ontologia-tcc/vocabulary/levantamento#fonte> , owl:Thing ;
+        <http://ontologia-tcc/vocabulary/base#descricao>
+                "Principal provedor de dados e informações do Brasil" ;
+        <http://ontologia-tcc/vocabulary/base#nome>
+                "Instituto Brasileiro de Geografia e Estatística" ;
+        <http://ontologia-tcc/vocabulary/levantamento#fonteDe>
+                <http://ontologia-tcc/description/instancias#IND6> , <http://ontologia-tcc/description/instancias#IND7> , <http://ontologia-tcc/description/instancias#IND1> , <http://ontologia-tcc/description/instancias#IND8> , <http://ontologia-tcc/description/instancias#IND2> ;
+        <http://ontologia-tcc/vocabulary/levantamento#fornece>
+                <http://ontologia-tcc/description/instancias#CGEE> , <http://ontologia-tcc/description/instancias#MCTI> , <http://ontologia-tcc/description/instancias#IBID> ;
+        <http://ontologia-tcc/vocabulary/levantamento#tipo>
+                "Fonte primária" ;
+        owl:sameAs  <http://ontologia-tcc/description/instancias#IBGE> .
+
+<http://ontologia-tcc/vocabulary/indicador#referencia>
+        rdf:type  owl:FunctionalProperty , owl:DatatypeProperty .
+
+<http://ontologia-tcc/vocabulary/validacao#auditoria>
+        rdf:type  owl:Class .
+
+<http://ontologia-tcc/description/instancias#IND9>
+        rdf:type    owl:Thing , <http://ontologia-tcc/vocabulary/base#EntidadeDescritivel> , <http://ontologia-tcc/vocabulary/base#EntidadeNomeavel> , <http://ontologia-tcc/vocabulary/indicador#indicador> , <http://ontologia-tcc/vocabulary/base#EntidadeIdentificavel> ;
+        <http://ontologia-tcc/vocabulary/base#nome>
+                "Proporção de docentes de pós-graduação beneficiados por bolsas CNPq, CAPES e FAPs dos estados." ;
+        <http://ontologia-tcc/vocabulary/indicador#categoria>
+                "Inovação" ;
+        <http://ontologia-tcc/vocabulary/indicador#formula>
+                "(Docentes de pós-graduação com bolsa / Docentes de pós-graduação) * 100" ;
+        <http://ontologia-tcc/vocabulary/indicador#metrica>
+                "% de docentes de pós-graduação beneficiados" ;
+        <http://ontologia-tcc/vocabulary/indicador#observacao>
+                "Pode haver diferenças de corte por agência; ver metadados de cada base." ;
+        <http://ontologia-tcc/vocabulary/indicador#periodicidade>
+                "Anual" ;
+        <http://ontologia-tcc/vocabulary/indicador#referencia>
+                "Relatório Técnico CLP 2025, p.83 | https://dadosabertos.capes.gov.br/dataset/ | https://portal-adm.cnpq.br/web/guest/dados_abertos | https://confap.org.br/" ;
+        <http://ontologia-tcc/vocabulary/levantamento#temFonte>
+                <http://ontologia-tcc/description/instancias#CNPq> , <http://ontologia-tcc/description/instancias#CAPES> ;
+        <http://ontologia-tcc/vocabulary/monitoramento#monitoradoPor>
+                <http://ontologia-tcc/description/instancias#GrafoConhecimento> ;
+        <http://ontologia-tcc/vocabulary/orgao#publicadoPor>
+                <http://ontologia-tcc/description/instancias#CLP> ;
+        <http://ontologia-tcc/vocabulary/publicacao#publicadoPor>
+                <http://ontologia-tcc/description/instancias#RelatorioCLP> ;
+        <http://ontologia-tcc/vocabulary/sistematizacao#apoiadoPor>
+                <http://ontologia-tcc/description/instancias#Oslo> ;
+        <http://ontologia-tcc/vocabulary/validacao#auditadoPor>
+                <http://ontologia-tcc/description/instancias#ValidInterna> ;
+        owl:sameAs  <http://ontologia-tcc/description/instancias#IND9> .
+
+<http://ontologia-tcc/description/instancias#IND3>
+        rdf:type    owl:Thing , <http://ontologia-tcc/vocabulary/base#EntidadeNomeavel> , <http://ontologia-tcc/vocabulary/indicador#indicador> , <http://ontologia-tcc/vocabulary/base#EntidadeIdentificavel> , <http://ontologia-tcc/vocabulary/base#EntidadeDescritivel> ;
+        <http://ontologia-tcc/vocabulary/base#descricao>
+                "Estimativa do gasto das IES com cursos stricto sensu como aproximação ao dispêndio em P&D." ;
+        <http://ontologia-tcc/vocabulary/base#nome>
+                "Estimativa de dispêndios das IES com pós-graduação (aproximação P&D)" ;
+        <http://ontologia-tcc/vocabulary/indicador#categoria>
+                "Recursos Aplicados" ;
+        <http://ontologia-tcc/vocabulary/indicador#metrica>
+                "R$ correntes / R$ 2020" ;
+        <http://ontologia-tcc/vocabulary/indicador#periodicidade>
+                "Anual" ;
+        <http://ontologia-tcc/vocabulary/indicador#referencia>
+                "Indicadores CT&I 2022 – Tabela 1.4.1 e Gráfico 17" ;
+        <http://ontologia-tcc/vocabulary/indicador#serie>
+                "2000–2020" ;
+        <http://ontologia-tcc/vocabulary/levantamento#temFonte>
+                <http://ontologia-tcc/description/instancias#CAPES> ;
+        <http://ontologia-tcc/vocabulary/monitoramento#monitoradoPor>
+                <http://ontologia-tcc/description/instancias#GrafoConhecimento> ;
+        <http://ontologia-tcc/vocabulary/orgao#publicadoPor>
+                <http://ontologia-tcc/description/instancias#MCTI> ;
+        <http://ontologia-tcc/vocabulary/publicacao#publicadoPor>
+                <http://ontologia-tcc/description/instancias#RelatorioMCTI> ;
+        <http://ontologia-tcc/vocabulary/sistematizacao#apoiadoPor>
+                <http://ontologia-tcc/description/instancias#Frascati> ;
+        <http://ontologia-tcc/vocabulary/validacao#auditadoPor>
+                <http://ontologia-tcc/description/instancias#ValidInterna> ;
+        owl:sameAs  <http://ontologia-tcc/description/instancias#IND3> .
+
+<http://ontologia-tcc/description/instancias#RelatorioIBID>
+        rdf:type    <http://ontologia-tcc/vocabulary/base#EntidadeIdentificavel> , <http://ontologia-tcc/vocabulary/publicacao#plataforma> , <http://ontologia-tcc/vocabulary/base#EntidadeDescritivel> , <http://ontologia-tcc/vocabulary/base#EntidadeNomeavel> , owl:Thing ;
+        <http://ontologia-tcc/vocabulary/base#nome>
+                "Relatório Técnico IBID 2025" ;
+        <http://ontologia-tcc/vocabulary/publicacao#publica>
+                <http://ontologia-tcc/description/instancias#IBID> ;
+        <http://ontologia-tcc/vocabulary/publicacao#publicaIndicador>
+                <http://ontologia-tcc/description/instancias#IND8> ;
+        <http://ontologia-tcc/vocabulary/publicacao#tipo>
+                "Relatórios e Boletins" ;
+        owl:sameAs  <http://ontologia-tcc/description/instancias#RelatorioIBID> .
+
+<http://ontologia-tcc/vocabulary/indicador#formula>
+        rdf:type  owl:FunctionalProperty , owl:DatatypeProperty .
+
+<http://ontologia-tcc/vocabulary/orgao#publicadoPor>
+        rdf:type  owl:ObjectProperty .
+
+<http://ontologia-tcc/description/instancias#GrafoConhecimento>
+        rdf:type    <http://ontologia-tcc/vocabulary/base#EntidadeDescritivel> , <http://ontologia-tcc/vocabulary/monitoramento#tecnicaMonitoramento> , <http://ontologia-tcc/vocabulary/base#EntidadeNomeavel> , owl:Thing , <http://ontologia-tcc/vocabulary/base#EntidadeIdentificavel> ;
+        <http://ontologia-tcc/vocabulary/base#nome>
+                "Integração via Grafos de Conhecimento" ;
+        <http://ontologia-tcc/vocabulary/monitoramento#aplicaMonitoramento>
+                <http://ontologia-tcc/description/instancias#IND6> , <http://ontologia-tcc/description/instancias#IND1> , <http://ontologia-tcc/description/instancias#IND2> , <http://ontologia-tcc/description/instancias#IND4> , <http://ontologia-tcc/description/instancias#IND10> , <http://ontologia-tcc/description/instancias#IND5> , <http://ontologia-tcc/description/instancias#IND8> , <http://ontologia-tcc/description/instancias#IND3> , <http://ontologia-tcc/description/instancias#IND9> , <http://ontologia-tcc/description/instancias#IND7> ;
+        <http://ontologia-tcc/vocabulary/monitoramento#utilizadoPor>
+                <http://ontologia-tcc/description/instancias#FIEC> , <http://ontologia-tcc/description/instancias#MCTI> , <http://ontologia-tcc/description/instancias#IBID> , <http://ontologia-tcc/description/instancias#CGEE> , <http://ontologia-tcc/description/instancias#CLP> ;
+        owl:sameAs  <http://ontologia-tcc/description/instancias#GrafoConhecimento> .
+
+<http://ontologia-tcc/vocabulary/indicador#periodicidade>
+        rdf:type  owl:FunctionalProperty , owl:DatatypeProperty .
+
+owl:Thing  rdf:type  owl:Class .
+
+<http://ontologia-tcc/vocabulary/orgao#publica>
+        rdf:type  owl:ObjectProperty .
+
+<http://ontologia-tcc/vocabulary/publicacao#publicaEm>
+        rdf:type  owl:ObjectProperty .
+
+<http://ontologia-tcc/description/instancias#MCTI>
+        rdf:type    <http://ontologia-tcc/vocabulary/base#EntidadeNomeavel> , <http://ontologia-tcc/vocabulary/base#EntidadeDescritivel> , owl:Thing , <http://ontologia-tcc/vocabulary/orgao#orgao> , <http://ontologia-tcc/vocabulary/base#EntidadeIdentificavel> ;
+        <http://ontologia-tcc/vocabulary/base#descricao>
+                "Agência Governamental" ;
+        <http://ontologia-tcc/vocabulary/base#nome>
+                "Ministério da Ciência, Tecnologia e Inovação (MCTI)" ;
+        <http://ontologia-tcc/vocabulary/levantamento#produzIndicador>
+                <http://ontologia-tcc/description/instancias#CAPES> , <http://ontologia-tcc/description/instancias#IBGE> ;
+        <http://ontologia-tcc/vocabulary/monitoramento#utiliza>
+                <http://ontologia-tcc/description/instancias#GrafoConhecimento> ;
+        <http://ontologia-tcc/vocabulary/orgao#publica>
+                <http://ontologia-tcc/description/instancias#IND6> , <http://ontologia-tcc/description/instancias#IND3> , <http://ontologia-tcc/description/instancias#IND4> , <http://ontologia-tcc/description/instancias#IND1> , <http://ontologia-tcc/description/instancias#IND2> ;
+        <http://ontologia-tcc/vocabulary/publicacao#publicaEm>
+                <http://ontologia-tcc/description/instancias#RelatorioMCTI> ;
+        <http://ontologia-tcc/vocabulary/sistematizacao#temMetodologia>
+                <http://ontologia-tcc/description/instancias#Frascati> ;
+        <http://ontologia-tcc/vocabulary/validacao#temAuditoria>
+                <http://ontologia-tcc/description/instancias#ValidInterna> ;
+        owl:sameAs  <http://ontologia-tcc/description/instancias#MCTI> .
+
+<http://ontologia-tcc/vocabulary/levantamento#produzIndicador>
+        rdf:type  owl:ObjectProperty .
+
+<http://ontologia-tcc/description/instancias#ValidInterna>
+        rdf:type    <http://ontologia-tcc/vocabulary/base#EntidadeIdentificavel> , <http://ontologia-tcc/vocabulary/validacao#auditoria> , <http://ontologia-tcc/vocabulary/base#EntidadeNomeavel> , owl:Thing , <http://ontologia-tcc/vocabulary/base#EntidadeDescritivel> ;
+        <http://ontologia-tcc/vocabulary/base#nome>
+                "Validação metodológica por técnicos da própria organização" ;
+        <http://ontologia-tcc/vocabulary/validacao#aplicaAuditoria>
+                <http://ontologia-tcc/description/instancias#IND5> , <http://ontologia-tcc/description/instancias#IND7> , <http://ontologia-tcc/description/instancias#IND4> , <http://ontologia-tcc/description/instancias#IND9> , <http://ontologia-tcc/description/instancias#IND6> , <http://ontologia-tcc/description/instancias#IND2> , <http://ontologia-tcc/description/instancias#IND10> , <http://ontologia-tcc/description/instancias#IND8> , <http://ontologia-tcc/description/instancias#IND1> , <http://ontologia-tcc/description/instancias#IND3> ;
+        <http://ontologia-tcc/vocabulary/validacao#pertenceA>
+                <http://ontologia-tcc/description/instancias#FIEC> , <http://ontologia-tcc/description/instancias#MCTI> , <http://ontologia-tcc/description/instancias#IBID> , <http://ontologia-tcc/description/instancias#CGEE> , <http://ontologia-tcc/description/instancias#CLP> ;
+        <http://ontologia-tcc/vocabulary/validacao#tipo>
+                "Interna" ;
+        owl:sameAs  <http://ontologia-tcc/description/instancias#ValidInterna> .
+
+<http://ontologia-tcc/description/instancias#IND8>
+        rdf:type    <http://ontologia-tcc/vocabulary/base#EntidadeNomeavel> , <http://ontologia-tcc/vocabulary/base#EntidadeIdentificavel> , owl:Thing , <http://ontologia-tcc/vocabulary/base#EntidadeDescritivel> , <http://ontologia-tcc/vocabulary/indicador#indicador> ;
+        <http://ontologia-tcc/vocabulary/base#descricao>
+                "Participação do VAB das atividades científicas e técnicas, administrativas e serviços complementares." ;
+        <http://ontologia-tcc/vocabulary/base#nome>
+                "VAB de atividades científicas e técnicas (2021)" ;
+        <http://ontologia-tcc/vocabulary/indicador#categoria>
+                "Inovação" ;
+        <http://ontologia-tcc/vocabulary/indicador#formula>
+                "VAB do setor ÷ VAB total × 100." ;
+        <http://ontologia-tcc/vocabulary/indicador#metrica>
+                "% do VAB" ;
+        <http://ontologia-tcc/vocabulary/indicador#observacao>
+                "Ano de referência listado é o último disponível na edição IBID 2025." ;
+        <http://ontologia-tcc/vocabulary/indicador#periodicidade>
+                "Anual" ;
+        <http://ontologia-tcc/vocabulary/indicador#referencia>
+                "https://www.ibge.gov.br/estatisticas/economicas/contas-nacionais/9088-contas-regionais-do-brasil.html" ;
+        <http://ontologia-tcc/vocabulary/indicador#serie>
+                "2014–2025 (varia por indicador conforme disponibilidade da fonte)" ;
+        <http://ontologia-tcc/vocabulary/levantamento#temFonte>
+                <http://ontologia-tcc/description/instancias#IBGE> ;
+        <http://ontologia-tcc/vocabulary/monitoramento#monitoradoPor>
+                <http://ontologia-tcc/description/instancias#GrafoConhecimento> ;
+        <http://ontologia-tcc/vocabulary/orgao#publicadoPor>
+                <http://ontologia-tcc/description/instancias#IBID> ;
+        <http://ontologia-tcc/vocabulary/publicacao#publicadoPor>
+                <http://ontologia-tcc/description/instancias#RelatorioIBID> ;
+        <http://ontologia-tcc/vocabulary/sistematizacao#apoiadoPor>
+                <http://ontologia-tcc/description/instancias#Frascati> ;
+        <http://ontologia-tcc/vocabulary/validacao#auditadoPor>
+                <http://ontologia-tcc/description/instancias#ValidInterna> ;
+        owl:sameAs  <http://ontologia-tcc/description/instancias#IND8> .
+
+<http://ontologia-tcc/vocabulary/monitoramento#tecnicaMonitoramento>
+        rdf:type  owl:Class .
+
+<http://ontologia-tcc/vocabulary/sistematizacao#aplicacao>
+        rdf:type  owl:FunctionalProperty , owl:DatatypeProperty .
+
+<http://ontologia-tcc/vocabulary/indicador#categoria>
+        rdf:type  owl:FunctionalProperty , owl:DatatypeProperty .
+
+<http://ontologia-tcc/description/instancias#IND10>
+        rdf:type    <http://ontologia-tcc/vocabulary/base#EntidadeNomeavel> , owl:Thing , <http://ontologia-tcc/vocabulary/indicador#indicador> , <http://ontologia-tcc/vocabulary/base#EntidadeIdentificavel> , <http://ontologia-tcc/vocabulary/base#EntidadeDescritivel> ;
+        <http://ontologia-tcc/vocabulary/base#descricao>
+                "Artigos indexados, citações, colaboração" ;
+        <http://ontologia-tcc/vocabulary/base#nome>
+                "Produção Científica" ;
+        <http://ontologia-tcc/vocabulary/indicador#categoria>
+                "Produção Científica" ;
+        <http://ontologia-tcc/vocabulary/indicador#metrica>
+                "contagem / índice per capita" ;
+        <http://ontologia-tcc/vocabulary/indicador#periodicidade>
+                "Anual" ;
+        <http://ontologia-tcc/vocabulary/indicador#referencia>
+                "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/indicadores/paginas/producao-cientifica/producao_cientifica/5-3-numero-de-artigos-brasileiros-da-america-latina-e-do-mundo-publicados-em-periodicos-cientificos-indexados-pela-scopus-por-area-do-conhecimento" ;
+        <http://ontologia-tcc/vocabulary/levantamento#temFonte>
+                <http://ontologia-tcc/description/instancias#CNPq> ;
+        <http://ontologia-tcc/vocabulary/monitoramento#monitoradoPor>
+                <http://ontologia-tcc/description/instancias#GrafoConhecimento> ;
+        <http://ontologia-tcc/vocabulary/orgao#publicadoPor>
+                <http://ontologia-tcc/description/instancias#FIEC> ;
+        <http://ontologia-tcc/vocabulary/publicacao#publicadoPor>
+                <http://ontologia-tcc/description/instancias#RelatorioFIEC> ;
+        <http://ontologia-tcc/vocabulary/sistematizacao#apoiadoPor>
+                <http://ontologia-tcc/description/instancias#Frascati> ;
+        <http://ontologia-tcc/vocabulary/validacao#auditadoPor>
+                <http://ontologia-tcc/description/instancias#ValidInterna> ;
+        owl:sameAs  <http://ontologia-tcc/description/instancias#IND10> .
+
+<http://ontologia-tcc/vocabulary/publicacao#publicaIndicador>
+        rdf:type  owl:ObjectProperty .
+
+<http://ontologia-tcc/description/instancias#IBID>
+        rdf:type    <http://ontologia-tcc/vocabulary/base#EntidadeNomeavel> , <http://ontologia-tcc/vocabulary/base#EntidadeIdentificavel> , owl:Thing , <http://ontologia-tcc/vocabulary/orgao#orgao> , <http://ontologia-tcc/vocabulary/base#EntidadeDescritivel> ;
+        <http://ontologia-tcc/vocabulary/base#descricao>
+                "Agência Governamental" ;
+        <http://ontologia-tcc/vocabulary/base#nome>
+                "Índice Brasil de Inovação e Desenvolvimento (IBID)" ;
+        <http://ontologia-tcc/vocabulary/levantamento#produzIndicador>
+                <http://ontologia-tcc/description/instancias#IBGE> ;
+        <http://ontologia-tcc/vocabulary/monitoramento#utiliza>
+                <http://ontologia-tcc/description/instancias#GrafoConhecimento> ;
+        <http://ontologia-tcc/vocabulary/orgao#publica>
+                <http://ontologia-tcc/description/instancias#IND8> ;
+        <http://ontologia-tcc/vocabulary/publicacao#publicaEm>
+                <http://ontologia-tcc/description/instancias#RelatorioIBID> ;
+        <http://ontologia-tcc/vocabulary/sistematizacao#temMetodologia>
+                <http://ontologia-tcc/description/instancias#Frascati> ;
+        <http://ontologia-tcc/vocabulary/validacao#temAuditoria>
+                <http://ontologia-tcc/description/instancias#ValidInterna> ;
+        owl:sameAs  <http://ontologia-tcc/description/instancias#IBID> .
+
+<http://ontologia-tcc/description/instancias#IND2>
+        rdf:type    <http://ontologia-tcc/vocabulary/base#EntidadeIdentificavel> , owl:Thing , <http://ontologia-tcc/vocabulary/base#EntidadeDescritivel> , <http://ontologia-tcc/vocabulary/base#EntidadeNomeavel> , <http://ontologia-tcc/vocabulary/indicador#indicador> ;
+        <http://ontologia-tcc/vocabulary/base#descricao>
+                "Razão entre o dispêndio nacional em C&T e o PIB, por setor." ;
+        <http://ontologia-tcc/vocabulary/base#nome>
+                "Dispêndio nacional em C&T em relação ao PIB por setor" ;
+        <http://ontologia-tcc/vocabulary/indicador#categoria>
+                "Recursos Aplicados" ;
+        <http://ontologia-tcc/vocabulary/indicador#metrica>
+                "% do PIB" ;
+        <http://ontologia-tcc/vocabulary/indicador#periodicidade>
+                "Anual" ;
+        <http://ontologia-tcc/vocabulary/indicador#referencia>
+                "Indicadores CT&I 2022 – Gráfico 3" ;
+        <http://ontologia-tcc/vocabulary/indicador#serie>
+                "2000–2020" ;
+        <http://ontologia-tcc/vocabulary/levantamento#temFonte>
+                <http://ontologia-tcc/description/instancias#IBGE> ;
+        <http://ontologia-tcc/vocabulary/monitoramento#monitoradoPor>
+                <http://ontologia-tcc/description/instancias#GrafoConhecimento> ;
+        <http://ontologia-tcc/vocabulary/orgao#publicadoPor>
+                <http://ontologia-tcc/description/instancias#MCTI> ;
+        <http://ontologia-tcc/vocabulary/publicacao#publicadoPor>
+                <http://ontologia-tcc/description/instancias#RelatorioMCTI> ;
+        <http://ontologia-tcc/vocabulary/sistematizacao#apoiadoPor>
+                <http://ontologia-tcc/description/instancias#Frascati> ;
+        <http://ontologia-tcc/vocabulary/validacao#auditadoPor>
+                <http://ontologia-tcc/description/instancias#ValidInterna> ;
+        owl:sameAs  <http://ontologia-tcc/description/instancias#IND2> .
+
+<http://ontologia-tcc/vocabulary/orgao#orgao>
+        rdf:type  owl:Class .
+
+<http://ontologia-tcc/vocabulary/levantamento#temFonte>
+        rdf:type  owl:ObjectProperty .
+
+owl:topObjectProperty
+        rdf:type  owl:SymmetricProperty , owl:TransitiveProperty , owl:ObjectProperty .
+
+owl:topDataProperty  rdf:type  owl:DatatypeProperty .
+
+<http://ontologia-tcc/vocabulary/levantamento#fornece>
+        rdf:type  owl:ObjectProperty .
+
+<http://ontologia-tcc/description/instancias#FIEC>
+        rdf:type    <http://ontologia-tcc/vocabulary/base#EntidadeDescritivel> , <http://ontologia-tcc/vocabulary/base#EntidadeIdentificavel> , owl:Thing , <http://ontologia-tcc/vocabulary/orgao#orgao> , <http://ontologia-tcc/vocabulary/base#EntidadeNomeavel> ;
+        <http://ontologia-tcc/vocabulary/base#descricao>
+                "Agência Governamental" ;
+        <http://ontologia-tcc/vocabulary/base#nome>
+                "Federação das Indústrias do Estado do Ceará (FIEC)" ;
+        <http://ontologia-tcc/vocabulary/levantamento#produzIndicador>
+                <http://ontologia-tcc/description/instancias#CNPq> ;
+        <http://ontologia-tcc/vocabulary/monitoramento#utiliza>
+                <http://ontologia-tcc/description/instancias#GrafoConhecimento> ;
+        <http://ontologia-tcc/vocabulary/orgao#publica>
+                <http://ontologia-tcc/description/instancias#IND10> ;
+        <http://ontologia-tcc/vocabulary/publicacao#publicaEm>
+                <http://ontologia-tcc/description/instancias#RelatorioFIEC> ;
+        <http://ontologia-tcc/vocabulary/sistematizacao#temMetodologia>
+                <http://ontologia-tcc/description/instancias#Frascati> ;
+        <http://ontologia-tcc/vocabulary/validacao#temAuditoria>
+                <http://ontologia-tcc/description/instancias#ValidInterna> ;
+        owl:sameAs  <http://ontologia-tcc/description/instancias#FIEC> .
+
+<http://ontologia-tcc/vocabulary/validacao#pertenceA>
+        rdf:type  owl:ObjectProperty .
+
+<http://ontologia-tcc/vocabulary/sistematizacao#temMetodologia>
+        rdf:type  owl:ObjectProperty .
+
+<http://ontologia-tcc/description/instancias#IND7>
+        rdf:type    <http://ontologia-tcc/vocabulary/indicador#indicador> , <http://ontologia-tcc/vocabulary/base#EntidadeIdentificavel> , owl:Thing , <http://ontologia-tcc/vocabulary/base#EntidadeDescritivel> , <http://ontologia-tcc/vocabulary/base#EntidadeNomeavel> ;
+        <http://ontologia-tcc/vocabulary/base#descricao>
+                "Proporção de empresas com inovação organizacional." ;
+        <http://ontologia-tcc/vocabulary/base#nome>
+                "Inovação organizacional (%)" ;
+        <http://ontologia-tcc/vocabulary/indicador#categoria>
+                "Inovação" ;
+        <http://ontologia-tcc/vocabulary/indicador#metrica>
+                "% de empresas" ;
+        <http://ontologia-tcc/vocabulary/indicador#periodicidade>
+                "Bienal/Trienal" ;
+        <http://ontologia-tcc/vocabulary/indicador#referencia>
+                "https://octi.cgee.org.br/" ;
+        <http://ontologia-tcc/vocabulary/indicador#serie>
+                "2008–presente" ;
+        <http://ontologia-tcc/vocabulary/levantamento#temFonte>
+                <http://ontologia-tcc/description/instancias#IBGE> ;
+        <http://ontologia-tcc/vocabulary/monitoramento#monitoradoPor>
+                <http://ontologia-tcc/description/instancias#GrafoConhecimento> ;
+        <http://ontologia-tcc/vocabulary/orgao#publicadoPor>
+                <http://ontologia-tcc/description/instancias#CGEE> ;
+        <http://ontologia-tcc/vocabulary/publicacao#publicadoPor>
+                <http://ontologia-tcc/description/instancias#PortalOCTI> ;
+        <http://ontologia-tcc/vocabulary/sistematizacao#apoiadoPor>
+                <http://ontologia-tcc/description/instancias#Oslo> ;
+        <http://ontologia-tcc/vocabulary/validacao#auditadoPor>
+                <http://ontologia-tcc/description/instancias#ValidInterna> ;
+        owl:sameAs  <http://ontologia-tcc/description/instancias#IND7> .
+
+<http://ontologia-tcc/description/instancias#CGEE>
+        rdf:type    <http://ontologia-tcc/vocabulary/base#EntidadeDescritivel> , <http://ontologia-tcc/vocabulary/base#EntidadeNomeavel> , <http://ontologia-tcc/vocabulary/orgao#orgao> , <http://ontologia-tcc/vocabulary/base#EntidadeIdentificavel> , owl:Thing ;
+        <http://ontologia-tcc/vocabulary/base#descricao>
+                "Agência Governamental" ;
+        <http://ontologia-tcc/vocabulary/base#nome>
+                "Centro de Gestão e Estudos Estratégicos (CGEE)" ;
+        <http://ontologia-tcc/vocabulary/levantamento#produzIndicador>
+                <http://ontologia-tcc/description/instancias#CNPq> , <http://ontologia-tcc/description/instancias#IBGE> ;
+        <http://ontologia-tcc/vocabulary/monitoramento#utiliza>
+                <http://ontologia-tcc/description/instancias#GrafoConhecimento> ;
+        <http://ontologia-tcc/vocabulary/orgao#publica>
+                <http://ontologia-tcc/description/instancias#IND7> , <http://ontologia-tcc/description/instancias#IND5> ;
+        <http://ontologia-tcc/vocabulary/publicacao#publicaEm>
+                <http://ontologia-tcc/description/instancias#PortalOCTI> ;
+        <http://ontologia-tcc/vocabulary/sistematizacao#temMetodologia>
+                <http://ontologia-tcc/description/instancias#Oslo> ;
+        <http://ontologia-tcc/vocabulary/validacao#temAuditoria>
+                <http://ontologia-tcc/description/instancias#ValidInterna> ;
+        owl:sameAs  <http://ontologia-tcc/description/instancias#CGEE> .
+
+<http://ontologia-tcc/vocabulary/indicador#serie>
+        rdf:type  owl:FunctionalProperty , owl:DatatypeProperty .
+
+<http://ontologia-tcc/description/instancias#CNPq>
+        rdf:type    <http://ontologia-tcc/vocabulary/base#EntidadeDescritivel> , <http://ontologia-tcc/vocabulary/base#EntidadeIdentificavel> , owl:Thing , <http://ontologia-tcc/vocabulary/levantamento#fonte> , <http://ontologia-tcc/vocabulary/base#EntidadeNomeavel> ;
+        <http://ontologia-tcc/vocabulary/base#descricao>
+                "Atua como o principal órgão de fomento à pesquisa científica, tecnológica e de inovação no Brasil" ;
+        <http://ontologia-tcc/vocabulary/base#nome>
+                "Conselho Nacional de Desenvolvimento Científico e Tecnológico" ;
+        <http://ontologia-tcc/vocabulary/levantamento#fonteDe>
+                <http://ontologia-tcc/description/instancias#IND9> , <http://ontologia-tcc/description/instancias#IND5> , <http://ontologia-tcc/description/instancias#IND10> ;
+        <http://ontologia-tcc/vocabulary/levantamento#fornece>
+                <http://ontologia-tcc/description/instancias#CLP> , <http://ontologia-tcc/description/instancias#FIEC> , <http://ontologia-tcc/description/instancias#CGEE> ;
+        <http://ontologia-tcc/vocabulary/levantamento#tipo>
+                "Fonte primária" ;
+        owl:sameAs  <http://ontologia-tcc/description/instancias#CNPq> .
+
+<http://ontologia-tcc/vocabulary/sistematizacao#aplicaMetodologia>
+        rdf:type  owl:ObjectProperty .
+
+<http://ontologia-tcc/vocabulary/base#EntidadeIdentificavel>
+        rdf:type  owl:Class .
+
+<http://ontologia-tcc/description/instancias#IND1>
+        rdf:type    <http://ontologia-tcc/vocabulary/indicador#indicador> , <http://ontologia-tcc/vocabulary/base#EntidadeDescritivel> , <http://ontologia-tcc/vocabulary/base#EntidadeNomeavel> , <http://ontologia-tcc/vocabulary/base#EntidadeIdentificavel> , owl:Thing ;
+        <http://ontologia-tcc/vocabulary/base#descricao>
+                "Total de dispêndios nacionais em ciência e tecnologia, por atividade de C&T" ;
+        <http://ontologia-tcc/vocabulary/base#nome>
+                "Dispêndio nacional em C&T por atividade" ;
+        <http://ontologia-tcc/vocabulary/indicador#categoria>
+                "Recursos Aplicados" ;
+        <http://ontologia-tcc/vocabulary/indicador#metrica>
+                "R$ correntes / R$ constantes (2020)" ;
+        <http://ontologia-tcc/vocabulary/indicador#observacao>
+                "Dados preliminares para anos mais recentes." ;
+        <http://ontologia-tcc/vocabulary/indicador#periodicidade>
+                "Anual" ;
+        <http://ontologia-tcc/vocabulary/indicador#referencia>
+                "Indicadores CT&I 2022 (artefato) – Tabela 1.1.1" ;
+        <http://ontologia-tcc/vocabulary/indicador#serie>
+                "2000–2020" ;
+        <http://ontologia-tcc/vocabulary/levantamento#temFonte>
+                <http://ontologia-tcc/description/instancias#IBGE> ;
+        <http://ontologia-tcc/vocabulary/monitoramento#monitoradoPor>
+                <http://ontologia-tcc/description/instancias#GrafoConhecimento> ;
+        <http://ontologia-tcc/vocabulary/orgao#publicadoPor>
+                <http://ontologia-tcc/description/instancias#MCTI> ;
+        <http://ontologia-tcc/vocabulary/publicacao#publicadoPor>
+                <http://ontologia-tcc/description/instancias#RelatorioMCTI> ;
+        <http://ontologia-tcc/vocabulary/sistematizacao#apoiadoPor>
+                <http://ontologia-tcc/description/instancias#Frascati> ;
+        <http://ontologia-tcc/vocabulary/validacao#auditadoPor>
+                <http://ontologia-tcc/description/instancias#ValidInterna> ;
+        owl:sameAs  <http://ontologia-tcc/description/instancias#IND1> .
+
+<http://ontologia-tcc/vocabulary/publicacao#publica>
+        rdf:type  owl:ObjectProperty .
+
+<http://ontologia-tcc/vocabulary/monitoramento#utiliza>
+        rdf:type  owl:ObjectProperty .
+
+<http://ontologia-tcc/description/instancias#RelatorioCLP>
+        rdf:type    <http://ontologia-tcc/vocabulary/publicacao#plataforma> , <http://ontologia-tcc/vocabulary/base#EntidadeNomeavel> , <http://ontologia-tcc/vocabulary/base#EntidadeDescritivel> , owl:Thing , <http://ontologia-tcc/vocabulary/base#EntidadeIdentificavel> ;
+        <http://ontologia-tcc/vocabulary/base#nome>
+                "Relatório Técnico CLP 2025" ;
+        <http://ontologia-tcc/vocabulary/publicacao#publica>
+                <http://ontologia-tcc/description/instancias#CLP> ;
+        <http://ontologia-tcc/vocabulary/publicacao#publicaIndicador>
+                <http://ontologia-tcc/description/instancias#IND9> ;
+        <http://ontologia-tcc/vocabulary/publicacao#tipo>
+                "Relatórios e Boletins" ;
+        owl:sameAs  <http://ontologia-tcc/description/instancias#RelatorioCLP> .
+
+<http://ontologia-tcc/description/instancias#IND6>
+        rdf:type    <http://ontologia-tcc/vocabulary/base#EntidadeIdentificavel> , owl:Thing , <http://ontologia-tcc/vocabulary/indicador#indicador> , <http://ontologia-tcc/vocabulary/base#EntidadeNomeavel> , <http://ontologia-tcc/vocabulary/base#EntidadeDescritivel> ;
+        <http://ontologia-tcc/vocabulary/base#descricao>
+                "Participação de empresas com inovação em produto e/ou processo." ;
+        <http://ontologia-tcc/vocabulary/base#nome>
+                "Percentual de empresas que implementaram inovações (produto/processo)" ;
+        <http://ontologia-tcc/vocabulary/indicador#categoria>
+                "Inovação" ;
+        <http://ontologia-tcc/vocabulary/indicador#metrica>
+                "% de empresas" ;
+        <http://ontologia-tcc/vocabulary/indicador#periodicidade>
+                "Trienal" ;
+        <http://ontologia-tcc/vocabulary/indicador#referencia>
+                "Indicadores CT&I 2022 – Tabela 6.1" ;
+        <http://ontologia-tcc/vocabulary/indicador#serie>
+                "2000–2017\t" ;
+        <http://ontologia-tcc/vocabulary/levantamento#temFonte>
+                <http://ontologia-tcc/description/instancias#IBGE> ;
+        <http://ontologia-tcc/vocabulary/monitoramento#monitoradoPor>
+                <http://ontologia-tcc/description/instancias#GrafoConhecimento> ;
+        <http://ontologia-tcc/vocabulary/orgao#publicadoPor>
+                <http://ontologia-tcc/description/instancias#MCTI> ;
+        <http://ontologia-tcc/vocabulary/publicacao#publicadoPor>
+                <http://ontologia-tcc/description/instancias#RelatorioMCTI> ;
+        <http://ontologia-tcc/vocabulary/sistematizacao#apoiadoPor>
+                <http://ontologia-tcc/description/instancias#Frascati> ;
+        <http://ontologia-tcc/vocabulary/validacao#auditadoPor>
+                <http://ontologia-tcc/description/instancias#ValidInterna> ;
+        owl:sameAs  <http://ontologia-tcc/description/instancias#IND6> .
+
+<http://ontologia-tcc/vocabulary/sistematizacao#apoiadoPor>
+        rdf:type  owl:ObjectProperty .
+
+<http://ontologia-tcc/vocabulary/base#descricao>
+        rdf:type  owl:FunctionalProperty , owl:DatatypeProperty .
+
+<http://ontologia-tcc/vocabulary/validacao#temAuditoria>
+        rdf:type  owl:ObjectProperty .
+
+<http://ontologia-tcc/vocabulary/publicacao#tipo>
+        rdf:type  owl:FunctionalProperty , owl:DatatypeProperty .
+
+<http://ontologia-tcc/vocabulary/indicador#unidTerritorial>
+        rdf:type  owl:FunctionalProperty , owl:DatatypeProperty .
+
+<http://ontologia-tcc/vocabulary/levantamento#fonteDe>
+        rdf:type  owl:ObjectProperty .

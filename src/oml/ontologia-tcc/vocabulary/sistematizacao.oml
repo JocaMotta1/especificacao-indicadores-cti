@@ -1,0 +1,30 @@
+vocabulary <http://ontologia-tcc/vocabulary/sistematizacao#> as sistematizacao {
+	
+	extends <http://www.w3.org/2001/XMLSchema#> as xsd
+	extends <http://ontologia-tcc/vocabulary/base#> as base
+	extends <http://ontologia-tcc/vocabulary/indicador#> as indicador
+	extends <http://ontologia-tcc/vocabulary/orgao#> as orgao
+	
+	concept metodologia < base:EntidadeNomeavel, base:EntidadeDescritivel, base:EntidadeIdentificavel
+	
+	scalar property aplicacao [
+		domain metodologia
+		range xsd:string
+		functional
+	]
+	
+	relation temMetodologia [
+		from orgao:orgao
+		to metodologia
+		reverse fundamenta
+		asymmetric
+		irreflexive
+	]
+	relation aplicaMetodologia [
+		from metodologia
+		to indicador:indicador
+		reverse apoiadoPor
+		asymmetric
+		irreflexive
+	]
+}

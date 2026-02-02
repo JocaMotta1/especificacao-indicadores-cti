@@ -1,0 +1,48 @@
+vocabulary <http://ontologia-tcc/vocabulary/indicador#> as indicador {
+	
+	extends <http://www.w3.org/2001/XMLSchema#> as xsd
+	extends <http://ontologia-tcc/vocabulary/base#> as base
+	
+	concept indicador < base:EntidadeNomeavel, base:EntidadeDescritivel, base:EntidadeIdentificavel
+	
+	scalar property categoria [
+		domain indicador
+		range xsd:string
+		functional
+	]
+	scalar property formula [
+		domain indicador
+		range xsd:string
+		functional
+	]
+	scalar property metrica [
+		domain indicador
+		range xsd:string
+		functional
+	]
+	scalar property serie [
+		domain indicador
+		range xsd:string
+		functional
+	]
+	scalar property periodicidade [
+		domain indicador
+		range xsd:string
+		functional
+	]
+	scalar property unidTerritorial [
+		domain indicador
+		range xsd:string
+		functional
+	]
+	scalar property referencia [
+		domain indicador
+		range xsd:string
+		functional
+	]
+	scalar property observacao [
+		domain indicador
+		range xsd:string
+		functional
+	]
+}

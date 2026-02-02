@@ -1,0 +1,15 @@
+vocabulary <http://ontologia-tcc/vocabulary/orgao#> as orgao {
+	
+	extends <http://ontologia-tcc/vocabulary/base#> as base
+	extends <http://ontologia-tcc/vocabulary/indicador#> as indicador
+	
+	concept orgao < base:EntidadeNomeavel, base:EntidadeDescritivel, base:EntidadeIdentificavel
+	
+	relation publica [
+		from orgao
+		to indicador:indicador
+		reverse publicadoPor
+		asymmetric
+		irreflexive
+	]
+}

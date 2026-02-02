@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://ontologia-tcc/vocabulary/levantamento#"
+     xml:base="http://ontologia-tcc/vocabulary/levantamento"
+     xmlns:oml="http://opencaesar.io/oml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:levantamento="http://ontologia-tcc/vocabulary/levantamento#">
+    <owl:Ontology rdf:about="http://ontologia-tcc/vocabulary/levantamento">
+        <owl:imports rdf:resource="http://ontologia-tcc/vocabulary/base"/>
+        <owl:imports rdf:resource="http://ontologia-tcc/vocabulary/indicador"/>
+        <owl:imports rdf:resource="http://ontologia-tcc/vocabulary/orgao"/>
+        <oml:namespace rdf:resource="http://ontologia-tcc/vocabulary/levantamento#"/>
+        <oml:prefix>levantamento</oml:prefix>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Vocabulary"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://ontologia-tcc/vocabulary/levantamento#fonteDe -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontologia-tcc/vocabulary/levantamento#fonteDe">
+        <owl:inverseOf rdf:resource="http://ontologia-tcc/vocabulary/levantamento#temFonte"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://ontologia-tcc/vocabulary/levantamento#fonte"/>
+        <rdfs:range rdf:resource="http://ontologia-tcc/vocabulary/indicador#indicador"/>
+        <oml:relationBase rdf:resource="http://ontologia-tcc/vocabulary/levantamento#temFonte"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ReverseRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontologia-tcc/vocabulary/levantamento#fornece -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontologia-tcc/vocabulary/levantamento#fornece">
+        <owl:inverseOf rdf:resource="http://ontologia-tcc/vocabulary/levantamento#produzIndicador"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://ontologia-tcc/vocabulary/levantamento#fonte"/>
+        <rdfs:range rdf:resource="http://ontologia-tcc/vocabulary/orgao#orgao"/>
+        <oml:relationBase rdf:resource="http://ontologia-tcc/vocabulary/levantamento#produzIndicador"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ReverseRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontologia-tcc/vocabulary/levantamento#produzIndicador -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontologia-tcc/vocabulary/levantamento#produzIndicador">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://ontologia-tcc/vocabulary/orgao#orgao"/>
+        <rdfs:range rdf:resource="http://ontologia-tcc/vocabulary/levantamento#fonte"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#UnreifiedRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://ontologia-tcc/vocabulary/levantamento#temFonte -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontologia-tcc/vocabulary/levantamento#temFonte">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://ontologia-tcc/vocabulary/indicador#indicador"/>
+        <rdfs:range rdf:resource="http://ontologia-tcc/vocabulary/levantamento#fonte"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#UnreifiedRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://ontologia-tcc/vocabulary/levantamento#tipo -->
+
+
+    <owl:DatatypeProperty rdf:about="http://ontologia-tcc/vocabulary/levantamento#tipo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://ontologia-tcc/vocabulary/levantamento#fonte"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://ontologia-tcc/vocabulary/levantamento#fonte -->
+
+
+    <owl:Class rdf:about="http://ontologia-tcc/vocabulary/levantamento#fonte">
+        <rdfs:subClassOf rdf:resource="http://ontologia-tcc/vocabulary/base#EntidadeDescritivel"/>
+        <rdfs:subClassOf rdf:resource="http://ontologia-tcc/vocabulary/base#EntidadeIdentificavel"/>
+        <rdfs:subClassOf rdf:resource="http://ontologia-tcc/vocabulary/base#EntidadeNomeavel"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.5.0.2023-01-14T12:41:38Z) https://github.com/owlcs/owlapi/ -->
+
+
