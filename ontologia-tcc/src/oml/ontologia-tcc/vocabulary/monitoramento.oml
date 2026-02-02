@@ -1,0 +1,23 @@
+vocabulary <http://ontologia-tcc/vocabulary/monitoramento#> as monitoramento {
+	
+	extends <http://ontologia-tcc/vocabulary/base#> as base
+	extends <http://ontologia-tcc/vocabulary/indicador#> as indicador
+	extends <http://ontologia-tcc/vocabulary/orgao#> as orgao
+	
+	concept tecnicaMonitoramento < base:EntidadeNomeavel, base:EntidadeDescritivel, base:EntidadeIdentificavel
+	
+	relation utiliza [
+		from orgao:orgao
+		to tecnicaMonitoramento
+		reverse utilizadoPor
+		asymmetric
+		irreflexive
+	]
+	relation aplicaMonitoramento [
+		from tecnicaMonitoramento
+		to indicador:indicador
+		reverse monitoradoPor
+		asymmetric
+		irreflexive
+	]
+}

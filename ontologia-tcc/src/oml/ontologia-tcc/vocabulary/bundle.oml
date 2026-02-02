@@ -1,0 +1,11 @@
+vocabulary bundle <http://ontologia-tcc/vocabulary/bundle#> as ^bundle {
+
+	includes <http://ontologia-tcc/vocabulary/base#>
+	includes <http://ontologia-tcc/vocabulary/indicador#>
+	includes <http://ontologia-tcc/vocabulary/orgao#>
+	includes <http://ontologia-tcc/vocabulary/levantamento#>
+	includes <http://ontologia-tcc/vocabulary/sistematizacao#>
+	includes <http://ontologia-tcc/vocabulary/validacao#>
+	includes <http://ontologia-tcc/vocabulary/publicacao#>
+	includes <http://ontologia-tcc/vocabulary/monitoramento#>
+}

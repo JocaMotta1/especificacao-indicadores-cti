@@ -1,0 +1,232 @@
+description <http://ontologia-tcc/description/instancias#> as instancias {
+	
+	uses <http://ontologia-tcc/vocabulary/base#> as base
+	uses <http://ontologia-tcc/vocabulary/indicador#> as indicador
+	uses <http://ontologia-tcc/vocabulary/orgao#> as orgao
+	uses <http://ontologia-tcc/vocabulary/levantamento#> as levantamento
+	uses <http://ontologia-tcc/vocabulary/sistematizacao#> as sistematizacao
+	uses <http://ontologia-tcc/vocabulary/validacao#> as validacao
+	uses <http://ontologia-tcc/vocabulary/publicacao#> as publicacao
+	uses <http://ontologia-tcc/vocabulary/monitoramento#> as monitoramento
+	
+	instance IND1 : indicador:indicador [
+		base:nome "Dispêndio nacional em C&T por atividade"
+		base:descricao "Total de dispêndios nacionais em ciência e tecnologia, por atividade de C&T"
+		indicador:categoria "Recursos Aplicados"
+		indicador:metrica "R$ correntes / R$ constantes (2020)"
+		levantamento:temFonte IBGE
+		indicador:serie "2000–2020"
+		indicador:periodicidade "Anual"
+		indicador:referencia "Indicadores CT&I 2022 (artefato) – Tabela 1.1.1"
+		indicador:observacao "Dados preliminares para anos mais recentes."
+	]
+	instance IND2 : indicador:indicador [
+		base:nome "Dispêndio nacional em C&T em relação ao PIB por setor"
+		base:descricao "Razão entre o dispêndio nacional em C&T e o PIB, por setor."
+		indicador:categoria "Recursos Aplicados"
+		indicador:metrica "% do PIB"
+		levantamento:temFonte IBGE
+		indicador:serie "2000–2020"
+		indicador:periodicidade "Anual"
+		indicador:referencia "Indicadores CT&I 2022 – Gráfico 3"
+	]
+	instance IND3 : indicador:indicador [
+		base:nome "Estimativa de dispêndios das IES com pós-graduação (aproximação P&D)"
+		base:descricao "Estimativa do gasto das IES com cursos stricto sensu como aproximação ao dispêndio em P&D."
+		indicador:categoria "Recursos Aplicados"
+		indicador:metrica "R$ correntes / R$ 2020"
+		levantamento:temFonte CAPES
+		indicador:serie "2000–2020"
+		indicador:periodicidade "Anual"
+		indicador:referencia "Indicadores CT&I 2022 – Tabela 1.4.1 e Gráfico 17"
+	]
+	instance IND4 : indicador:indicador [
+		base:nome "Doutores titulados por grande área"
+		base:descricao "Número de doutores titulados por grande área do conhecimento."
+		indicador:categoria "Recursos Humanos"
+		indicador:metrica "Pessoas"
+		levantamento:temFonte CAPES
+		indicador:serie "2000–2021"
+		indicador:periodicidade "Anual"
+		indicador:referencia "Indicadores CT&I 2022 – Tabela 2.3.2"
+	]
+	instance IND5 : indicador:indicador [
+		base:nome "Bolsas de pesquisa do CNPq"
+		base:descricao "Número de bolsas de pesquisa e produtividade concedidas pelo CNPq."
+		indicador:categoria "Recursos Humanos"
+		indicador:metrica "nº de bolsas"
+		levantamento:temFonte CNPq
+		indicador:serie "2000–presente"
+		indicador:periodicidade "Anual"
+		indicador:referencia "https://octi.cgee.org.br/"
+	]
+	instance IND6 : indicador:indicador [
+		base:nome "Percentual de empresas que implementaram inovações (produto/processo)"
+		base:descricao "Participação de empresas com inovação em produto e/ou processo."
+		indicador:categoria "Inovação"
+		indicador:metrica "% de empresas"
+		levantamento:temFonte IBGE
+		indicador:serie "2000–2017	"
+		indicador:periodicidade "Trienal"
+		indicador:referencia "Indicadores CT&I 2022 – Tabela 6.1"
+	]
+	instance IND7 : indicador:indicador [
+		base:nome "Inovação organizacional (%)"
+		base:descricao "Proporção de empresas com inovação organizacional."
+		indicador:categoria "Inovação"
+		indicador:metrica "% de empresas"
+		levantamento:temFonte IBGE
+		indicador:serie "2008–presente"
+		indicador:periodicidade "Bienal/Trienal"
+		indicador:referencia "https://octi.cgee.org.br/"
+	]
+	instance IND8 : indicador:indicador [
+		base:nome "VAB de atividades científicas e técnicas (2021)"
+		base:descricao "Participação do VAB das atividades científicas e técnicas, administrativas e serviços complementares."
+		indicador:categoria "Inovação"
+		indicador:metrica "% do VAB"
+		indicador:formula "VAB do setor ÷ VAB total × 100."
+		levantamento:temFonte IBGE
+		indicador:serie "2014–2025 (varia por indicador conforme disponibilidade da fonte)"
+		indicador:periodicidade "Anual"
+		indicador:referencia "https://www.ibge.gov.br/estatisticas/economicas/contas-nacionais/9088-contas-regionais-do-brasil.html"
+		indicador:observacao "Ano de referência listado é o último disponível na edição IBID 2025."
+	]
+	instance IND9 : indicador:indicador [
+		base:nome "Proporção de docentes de pós-graduação beneficiados por bolsas CNPq, CAPES e FAPs dos estados."
+		indicador:categoria "Inovação"
+		indicador:metrica "% de docentes de pós-graduação beneficiados"
+		indicador:formula "(Docentes de pós-graduação com bolsa / Docentes de pós-graduação) * 100"
+		levantamento:temFonte CAPES, CNPq
+		indicador:periodicidade "Anual"
+		indicador:referencia "Relatório Técnico CLP 2025, p.83 | https://dadosabertos.capes.gov.br/dataset/ | https://portal-adm.cnpq.br/web/guest/dados_abertos | https://confap.org.br/"
+		indicador:observacao "Pode haver diferenças de corte por agência; ver metadados de cada base."
+	]
+	instance IND10 : indicador:indicador [
+		base:nome "Produção Científica"
+		base:descricao "Artigos indexados, citações, colaboração"
+		indicador:categoria "Produção Científica"
+		indicador:metrica "contagem / índice per capita"
+		levantamento:temFonte CNPq
+		indicador:periodicidade "Anual"
+		indicador:referencia "https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/indicadores/paginas/producao-cientifica/producao_cientifica/5-3-numero-de-artigos-brasileiros-da-america-latina-e-do-mundo-publicados-em-periodicos-cientificos-indexados-pela-scopus-por-area-do-conhecimento"
+	]
+	
+	instance MCTI : orgao:orgao [
+		base:nome "Ministério da Ciência, Tecnologia e Inovação (MCTI)"
+		base:descricao "Agência Governamental"
+		orgao:publica IND1, IND2, IND3, IND4, IND6
+		levantamento:produzIndicador IBGE, CAPES
+		sistematizacao:temMetodologia Frascati
+		validacao:temAuditoria ValidInterna
+		publicacao:publicaEm RelatorioMCTI
+		monitoramento:utiliza GrafoConhecimento
+	]
+	instance CGEE : orgao:orgao [
+		base:nome "Centro de Gestão e Estudos Estratégicos (CGEE)"
+		base:descricao "Agência Governamental"
+		orgao:publica IND5, IND7
+		levantamento:produzIndicador IBGE, CNPq
+		sistematizacao:temMetodologia Oslo
+		validacao:temAuditoria ValidInterna
+		publicacao:publicaEm PortalOCTI
+		monitoramento:utiliza GrafoConhecimento
+	]
+	instance IBID : orgao:orgao [
+		base:nome "Índice Brasil de Inovação e Desenvolvimento (IBID)"
+		base:descricao "Agência Governamental"
+		orgao:publica IND8
+		levantamento:produzIndicador IBGE
+		sistematizacao:temMetodologia Frascati
+		validacao:temAuditoria ValidInterna
+		publicacao:publicaEm RelatorioIBID
+		monitoramento:utiliza GrafoConhecimento
+	]
+	instance CLP : orgao:orgao [
+		base:nome "Ranking de Competitividade do CLP - Centro de Liderança Pública (CLP)"
+		base:descricao "Agência Governamental"
+		orgao:publica IND9
+		levantamento:produzIndicador CAPES, CNPq
+		sistematizacao:temMetodologia Oslo
+		validacao:temAuditoria ValidInterna
+		publicacao:publicaEm RelatorioCLP
+		monitoramento:utiliza GrafoConhecimento
+	]
+	instance FIEC : orgao:orgao [
+		base:nome "Federação das Indústrias do Estado do Ceará (FIEC)"
+		base:descricao "Agência Governamental"
+		orgao:publica IND10
+		levantamento:produzIndicador CNPq
+		sistematizacao:temMetodologia Frascati
+		validacao:temAuditoria ValidInterna
+		publicacao:publicaEm RelatorioFIEC
+		monitoramento:utiliza GrafoConhecimento
+	]
+	
+	instance IBGE : levantamento:fonte [
+		base:nome "Instituto Brasileiro de Geografia e Estatística"
+		base:descricao "Principal provedor de dados e informações do Brasil"
+		levantamento:tipo "Fonte primária"
+	]
+	instance CAPES : levantamento:fonte [
+		base:nome "Coordenação de Aperfeiçoamento de Pessoal de Nível Superior"
+		base:descricao "responsável por avaliar, fomentar e consolidar a pós-graduação stricto sensu (mestrado e doutorado) no Brasil, além de formar professores 
+da educação básica"
+		levantamento:tipo "Fonte primária"
+	]
+	instance CNPq : levantamento:fonte [
+		base:nome "Conselho Nacional de Desenvolvimento Científico e Tecnológico"
+		base:descricao "Atua como o principal órgão de fomento à pesquisa científica, tecnológica e de inovação no Brasil"
+		levantamento:tipo "Fonte primária"
+	]
+	
+	instance Frascati : sistematizacao:metodologia [
+		base:nome "Manual de Frascati"
+		base:descricao "Principal guia metodológico internacional para definir, coletar e harmonizar estatísticas sobre Pesquisa e Desenvolvimento (P&D)"
+		sistematizacao:aplicacao "P&D e insumos"
+		sistematizacao:aplicaMetodologia IND1, IND2, IND3, IND4, IND6, IND8, IND10
+	]
+	instance Oslo : sistematizacao:metodologia [
+		base:nome "Manual de Oslo"
+		base:descricao "Principal guia internacional para coleta, interpretação e padronização de dados sobre inovação."
+		sistematizacao:aplicacao "Inovação"
+		sistematizacao:aplicaMetodologia IND5, IND7, IND9
+	]
+	
+	instance ValidInterna : validacao:auditoria [
+		base:nome "Validação metodológica por técnicos da própria organização"
+		validacao:tipo "Interna"
+		validacao:aplicaAuditoria IND1, IND2, IND3, IND4, IND5, IND6, IND7, IND8, IND9, IND10
+	]
+	
+	instance RelatorioMCTI : publicacao:plataforma [
+		base:nome "Indicadores Nacionais de Ciência, Tecnologia e Inovação (2022)"
+		publicacao:tipo "Relatórios e Boletins"
+		publicacao:publicaIndicador IND1, IND2, IND3, IND4, IND6
+	]
+	instance PortalOCTI : publicacao:plataforma [
+		base:nome "Portal oficial do Observatório de Ciência, Tecnologia e Inovação"
+		publicacao:tipo "Portal Oficial"
+		publicacao:publicaIndicador IND5, IND7
+	]
+	instance RelatorioIBID : publicacao:plataforma [
+		base:nome "Relatório Técnico IBID 2025"
+		publicacao:tipo "Relatórios e Boletins"
+		publicacao:publicaIndicador IND8
+	]
+	instance RelatorioCLP : publicacao:plataforma [
+		base:nome "Relatório Técnico CLP 2025"
+		publicacao:tipo "Relatórios e Boletins"
+		publicacao:publicaIndicador IND9
+	]
+	instance RelatorioFIEC : publicacao:plataforma [
+		base:nome "Relatório Técnico FIEC 2025"
+		publicacao:tipo "Relatórios e Boletins"
+		publicacao:publicaIndicador IND10
+	]
+	
+	instance GrafoConhecimento : monitoramento:tecnicaMonitoramento [
+		base:nome "Integração via Grafos de Conhecimento"
+		monitoramento:aplicaMonitoramento IND1, IND2, IND3, IND4, IND5, IND6, IND7, IND8, IND9, IND10
+	]
+}
