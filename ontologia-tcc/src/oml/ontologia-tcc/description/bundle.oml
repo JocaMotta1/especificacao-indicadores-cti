@@ -1,5 +1,0 @@
-description bundle <http://ontologia-tcc/description/bundle#> as ^bundle {
-	
-	includes <http://ontologia-tcc/description/instancias#>
-	uses <http://ontologia-tcc/vocabulary/bundle#>
-}
